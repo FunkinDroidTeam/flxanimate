@@ -221,9 +221,11 @@ class FlxSymbol implements IFlxDestroyable
 
 			var elements = keyframe.getList();
 
+			if (elements.length < 1) continue;
+
 			if (index > elements.length - 1)
 			{
-				index -= elements.length - 1;
+				index = elements.length - 1;
 				continue;
 			}
 
